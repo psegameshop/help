@@ -1,0 +1,228 @@
+:root{
+	--pse-bg: #e8f2f7;
+	--pse-text: #303131;
+	--pse-color: #f5deb3;
+	--pse-nav-1: #00a3ff;
+	--pse-color-1:#0d6efd;
+	--pse-footer: #333;
+	--pse-emboss-bg: #e1ecf5;
+	--pse-emboss-border: #d2deeb;
+	--pse-emboss-highlight: #f4f8fa;
+	--pse-secondary-btn: #eff7fa;
+	--pse-secondary-btn-text: #707e93;
+	--pse-font-size: 1.1rem;
+	--pse-font: "Josefin Sans", serif;
+	--pse-gradient: linear-gradient(90deg, rgba(0,166,255,1) 0%, rgba(199,255,216,1) 100%);
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: var(--pse-bg);
+	  background-position: center top;
+	  font-size: var(--pse-font-size);
+	  font-family: var(--pse-font);
+	  color: var(--pse-text);
+}
+
+.navbar {
+    background-color: rgba(0,0,0,0.8) !important;
+}
+    /* Hide text on smaller screens */
+    @media (max-width: 576px) {
+      .nav-link span {
+        display: none;
+      }
+      .nav-link i {
+        margin: 0;
+        font-size: 1.4rem;
+      }
+    }
+
+    /* Spacing between icon and text */
+    .nav-link i {
+      margin-right: 6px;
+    }
+    
+    .navbar-nav .nav-link.active {
+      border-bottom: 2px solid var(--pse-nav-1);
+      font-weight: bold;
+    }
+
+.splash-border{
+	width: 100%;
+	background-image: var(--pse-gradient);
+	padding-bottom: 2px;
+}
+
+section > .container{
+  background-color: white;
+  max-width: 100%;
+}
+
+.cover-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #333;
+  overflow: hidden;
+  background-image: url('../assets/img/help-hero-banner.avif');
+  background-position: center;
+  background-size: cover;
+}
+
+.cover-section > .container{
+  background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7));
+  border-top: 4px solid #bfbcbb;
+  border-bottom: 4px solid #bfbcbb;
+  width: 100%;
+  max-width: 100%;
+  color: var(--pse-color-1);
+  font-weight: 700;
+}
+
+.cover-section > .container p{
+  margin-bottom: 0rem;
+  font-weight: 700;
+}
+
+.container{
+  overflow: hidden;
+  position: relative;
+}
+
+.container > * {
+  position: relative;
+  z-index: 2;
+}
+
+.container > .accented-title > .accent-text {
+   color: var(--pse-bg);
+}
+
+#help > .container{
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/img/bg-misc.avif') bottom/cover no-repeat;
+}
+
+#guide > .container{
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/img/bg-misc.avif') bottom/cover no-repeat;
+}
+
+#venue > .container{
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/img/bg-misc.avif') bottom/cover no-repeat;
+}
+
+#help > .container::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -50vh;
+  height: 100vh;
+  width: 100vh;       /* adjust size */
+  background: url('../assets/img/accent-wheel.avif') no-repeat center/contain;
+  animation: spin-please 20s linear infinite;
+  opacity: 0.15;       /* soft, non-distracting */
+  z-index: 0;
+}
+
+@keyframes spin-please {
+  from { transform: translateY(-50%) rotate(0deg); }
+  to   { transform: translateY(-50%) rotate(360deg); }
+}
+
+h2{
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.accented-title {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers text */
+  gap: 1rem; /* spacing between text and accents */
+}
+
+/* Left accent */
+.accented-title::before,
+.accented-title::after {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  margin-top: -10px;
+}
+
+.accented-title::before {
+  background: url('../assets/img/accent-h.png') no-repeat center/contain;
+  transform: scaleX(-1); /* horizontal mirror */
+}
+
+/* Right accent */
+.accented-title::after {
+  background: url('../assets/img/accent-h.png') no-repeat center/contain;
+}
+
+.btn{
+  border-top-right-radius:   0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius:    1.00rem;
+  border-bottom-right-radius:1.00rem;
+  border: 2px solid #18ffff;
+  color: var(--pse-bg);
+  background-color: var(--pse-color-1);
+}
+
+.btn:hover{
+  color: var(--pse-bg);
+  background-color: var(--pse-color-1);
+  border: 2px solid #00ffff;
+  box-shadow: inset 0 0 0.5rem rgba(0, 255, 255, 1), /* inner glow */
+    0 0 0.5rem #00ffff;   
+}
+
+.btn-accent{
+  background-image: url('../assets/img/accent-btn.png');
+  background-repeat: no-repeat;
+  background-position: right -13px bottom -9px;
+  background-size: 4rem auto;
+}
+
+.card{
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left: 0;
+  border-right: 0;
+  z-index: 2;
+  border-radius: 0;
+}
+
+.card.switch{
+  background: linear-gradient(90deg, rgba(255,   0,   0, 0.0) 0%, rgba(255,   0,   0, 0.2) 20%, rgba(255,   0,   0, 0.2) 80%, rgba(255,   0,   0, 0.0) 100%);
+}
+
+.card.playstation{
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.0) 0%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.0) 100%);
+}
+
+.card.xbox{
+  background: linear-gradient(90deg, rgba( 16, 123,  16, 0.0) 0%, rgba( 16, 123,  16, 0.2) 20%, rgba( 16, 123,  16, 0.2) 80%, rgba( 16, 123,  16, 0.0) 100%);
+}
+
+.card-title {
+  color: var(--pse-bg);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.console-icon{
+  height: 1.25rem;
+  vertical-align: -.125em;
+}
+
+footer {
+    background-color: var(--pse-footer);
+}
