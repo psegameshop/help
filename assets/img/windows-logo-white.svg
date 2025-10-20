@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        isolation: isolate;
+      }
+    </style>
+  </defs>
+  <g id="windows" class="cls-2">
+    <g id="windows-2" data-name="windows">
+      <path class="cls-1" d="M0,341h342V0H0v341ZM0,720h342v-341H0v341ZM379,720h341v-341h-341v341ZM379,0v341h341V0h-341Z"/>
+    </g>
+  </g>
+</svg>
