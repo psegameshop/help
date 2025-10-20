@@ -104,11 +104,11 @@ section > .container{
 #home .spin-5 { background: url("../assets/img/accent-wheel-hero-5.avif") center/contain no-repeat; }
 
 /* Each one placed differently */
-#home .spin-1 { width:  23vh; height:  23vh; top:     14vh; left: -12vh; animation-duration: 25s; }
-#home .spin-2 { width:  98vh; height:  98vh; bottom:-108vh; left: -20vh; animation-duration: 35s; animation-direction: reverse;}
-#home .spin-3 { width: 100vh; height: 100vh; top:     -7vh; right:-29vw; animation-duration: 30s; }
-#home .spin-4 { width:  15vh; height:  15vh; bottom:  20vh; right:  4vw; animation-duration: 40s; }
-#home .spin-5 { width: 100vh; height: 100vh; bottom:-120vh; right:-30vw; animation-duration: 60s; animation-direction: reverse;}
+#home .spin-1 { width:  23vh; height:  23vh; top:     14vh; left: -12vh; animation-duration: 20s; }
+#home .spin-2 { width:  98vh; height:  98vh; bottom:-108vh; left: -20vh; animation-duration: 30s; animation-direction: reverse;}
+#home .spin-3 { width: 100vh; height: 100vh; top:     -7vh; right:-29vw; animation-duration: 40s; }
+#home .spin-4 { width:  15vh; height:  15vh; bottom:  20vh; right:  4vw; animation-duration: 50s; animation-direction: reverse;}
+#home .spin-5 { width: 100vh; height: 100vh; bottom:-120vh; right:-30vw; animation-duration: 60s; }
 
 
 
