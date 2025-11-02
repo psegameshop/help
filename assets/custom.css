@@ -21,7 +21,7 @@ body {
 	  background-position: center top;
 	  font-size: var(--pse-font-size);
 	  font-family: var(--pse-font);
-	  color: var(--pse-text);
+	  color: var(--pse-bg);
 }
 
 .navbar {
@@ -216,6 +216,7 @@ h2{
     text-transform: uppercase;
 }
 
+.guide-container h2,
 .accented-title {
   display: flex;
   align-items: center;
@@ -224,6 +225,8 @@ h2{
 }
 
 /* Left accent */
+.guide-container h2::before,
+.guide-container h2::after,
 .accented-title::before,
 .accented-title::after {
   content: "";
@@ -233,12 +236,14 @@ h2{
   margin-top: -10px;
 }
 
+.guide-container h2::before,
 .accented-title::before {
   background: url('../assets/img/accent-h.png') no-repeat center/contain;
   transform: scaleX(-1); /* horizontal mirror */
 }
 
 /* Right accent */
+.guide-container h2::after,
 .accented-title::after {
   background: url('../assets/img/accent-h.png') no-repeat center/contain;
 }
@@ -316,3 +321,48 @@ h2{
 footer {
     background-color: var(--pse-footer);
 }
+
+
+/* Guide Page Overrides */
+#guide-container {
+  color: var(--pse-bg) !important;
+  min-height: 100vh;
+  padding-top: 6rem;
+  font-size: 1.4rem;
+}
+
+#guide-container h3{
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  border-bottom: 1px solid;
+  border-color: #18ffff;
+  background-image: url('../assets/img/accent-btn.png');
+  background-repeat: no-repeat;
+  background-position: right -13px bottom -9px;
+  background-size: 4rem auto;
+}
+
+#guide-container h4{
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  font-size: 1.6rem;
+  border-left: 4px solid;
+  border-color: #18ffff;
+}
+
+#guide-container img{
+  width: 100%;
+  margin-bottom: 4rem;
+
+}
+
+@media (min-width: 768px) {
+    #guide-container {
+      padding-left: 6.25vw;
+      padding-right: 6.25vw;
+    }
+}
+
