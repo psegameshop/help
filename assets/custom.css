@@ -324,14 +324,23 @@ footer {
 
 
 /* Guide Page Overrides */
-#guide-container {
+#guide-container,
+.guide-post-content {
   color: var(--pse-bg) !important;
-  min-height: 100vh;
-  padding-top: 6rem;
   font-size: 1.4rem;
 }
 
-#guide-container h3{
+#guide-container{
+  min-height: 100vh;
+  padding-top: 6rem;
+}
+
+.guide-post-content{
+  padding-bottom: 4rem;
+}
+
+#guide-container h3,
+.guide-post-content h3 {
   margin-top: 4rem;
   margin-bottom: 1.5rem;
   font-size: 2rem;
@@ -360,9 +369,13 @@ footer {
 }
 
 @media (min-width: 768px) {
-    #guide-container {
+    #guide-container,
+    .guide-post-content {
       padding-left: 6.25vw;
       padding-right: 6.25vw;
     }
+    #guide-container img {
+      padding-left: 12vw;
+      padding-right: 12vw;
+    } 
 }
-
