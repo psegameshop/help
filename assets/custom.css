@@ -87,6 +87,7 @@ section > .container{
   inset: 0;
   background: url("../assets/img/help-hero-bg.avif") center/cover no-repeat;
   z-index: 1;
+  height: 100vh;
 }
 
 /* Spinning elements */
@@ -148,6 +149,10 @@ section > .container{
    color: var(--pse-bg);
 }
 
+#campaign > .container{
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/img/bg-misc.avif') bottom/cover no-repeat;
+}
+
 #help > .container{
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/img/bg-misc.avif') bottom/cover no-repeat;
 }
@@ -159,6 +164,20 @@ section > .container{
 #venue > .container{
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/img/bg-misc.avif') bottom/cover no-repeat;
 }
+
+#campaign > .container::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30vh;
+  height: 60vh;
+  width: 60vh;       /* adjust size */
+  background: url('../assets/img/accent-wheel-2.avif') no-repeat center/contain;
+  animation: spin-please 20s linear infinite;
+  opacity: 0.15;       /* soft, non-distracting */
+  z-index: 0;
+}
+
 
 #help > .container::before{
   content: "";
